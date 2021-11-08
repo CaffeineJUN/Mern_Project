@@ -12,6 +12,7 @@ import DetailProductPage from './views/DetailProductPage/DetailProductPage'
 import CartPage from './views/CartPage/CartPage'
 import HistoryPage from './views/HistoryPage/HistoryPage'
 import Home from './views/Home/Home'
+import Texi from './t_view/Texi/Texi'
 
 //null   Anyone Can go inside
 //true   only logged in user can go inside
@@ -24,6 +25,7 @@ function App() {
             <div style={{paddingTop: '69px', minHeight: 'calc(100vh - 80px)'}}>
                 <Switch>
                     <Route exact path="/" component={Auth(Home, null)} />
+                    <Route exact path="/texi" component={Auth(Texi, null)} />
                     <Route exact path="/shop" component={Auth(LandingPage, null)} />
                     <Route exact path="/login" component={Auth(LoginPage, false)} />
                     <Route exact path="/register" component={Auth(RegisterPage, false)} />
